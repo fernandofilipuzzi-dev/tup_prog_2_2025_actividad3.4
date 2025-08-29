@@ -7,10 +7,9 @@ public class Ortoedro : Figura
     public double Alto { get; set; }
     public double Largo { get; set; }
 
-    public Ortoedro(double ancho, double alto, double largo)
+    public Ortoedro(double ancho, double alto, double largo):base(alto)
     {
         this.Ancho = ancho;
-        Alto = alto;
         Largo = largo;
     }
 
@@ -21,8 +20,6 @@ public class Ortoedro : Figura
 
     public override string Describir()
     {
-        return $"Ortoedro: Ancho: {Ancho}";
+        return $"Ortoedro: An: {Ancho:f2}, Al: {Alto:f2}, La: {Largo:f2}, Vol:{CalcularVolumen():f2}"; 
     }
-
-   
 }

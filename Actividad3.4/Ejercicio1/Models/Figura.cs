@@ -3,6 +3,13 @@ namespace Ejercicio1.Models;
 
 abstract public class Figura :IComparable
 {
+    public double Altura { get; set; }
+
+    public Figura(double altura)
+    { 
+        Altura = altura;
+    }
+
     abstract public string Describir();
     
     virtual public double CalcularVolumen()
@@ -12,7 +19,7 @@ abstract public class Figura :IComparable
 
     public override string ToString()
     {
-        return Describir();
+        return Describir(); //comportamiento polimorfico!
     }
 
     public int CompareTo(object otra)

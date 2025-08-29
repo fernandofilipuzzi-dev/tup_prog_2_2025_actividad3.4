@@ -7,12 +7,10 @@ namespace Ejercicio1.Models;
 public class Cilindro : Figura
 {
     public double Radio { get; set; }
-    public double Altura { get; set; }
-
-    public Cilindro(double radio, double altura)
+  
+    public Cilindro(double radio, double altura):base(altura)
     {
         this.Radio = radio;
-        this.Altura = altura;
     }
 
     public override double CalcularVolumen()
